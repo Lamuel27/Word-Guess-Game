@@ -1,3 +1,17 @@
+    // var imdb = requirejs('imdb-api')
+    // var requirejs = require('require.js')
+    // var imdb = require('imdb-api')
+
+    // requirejs.config({
+    //     nodeRequire: require
+    // });
+
+    // var imdb = requirejs('imdb-api')
+    // requirejs(['imdb-api'],
+    // function   (imdbapi) {
+       
+    // });
+
 window.onload = function () {
 
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -13,7 +27,7 @@ window.onload = function () {
     var lives ;             // Lives
     var counter ;           // Count correct geusses
     var space;              // Number of spaces in word '-'
-  
+    
     // Get elements
     var showLives = document.getElementById("mylives");
     var showCatagory = document.getElementById("scatagory");
@@ -59,8 +73,8 @@ window.onload = function () {
         correct.setAttribute('id', 'my-word');
         guess = document.createElement('li');
         guess.setAttribute('class', 'guess');
-        if (word[i] === "-") {
-          guess.innerHTML = "-";
+        if (word[i] === " ") {
+          guess.innerHTML = " ";
           space = 1;
         } else {
           guess.innerHTML = "_";
@@ -93,10 +107,10 @@ window.onload = function () {
     }
   
     
-     // Hangman
+     // Movie Type
     canvas =  function(){
   
-      myStickman = document.getElementById("stickman");
+      myStickman = document.getElementById("movietype");
       context = myStickman.getContext('2d');
       context.beginPath();
       context.strokeStyle = "#fff";
@@ -104,7 +118,7 @@ window.onload = function () {
     };
     
       head = function(){
-        myStickman = document.getElementById("stickman");
+        myStickman = document.getElementById("movietype");
         context = myStickman.getContext('2d');
         context.beginPath();
         context.arc(60, 25, 10, 0, Math.PI*2, true);
@@ -139,14 +153,15 @@ window.onload = function () {
     // Play
     play = function () {
       categories = [
-          ["alien", "jaws", "predator", "it", "halloween", "insidious","the-shining","the-silence-of-the-lambs","the-sixth-sense","the-ring","saw","the-conjuring"],
-          ["gladiator", "pirates-of-the-caribbean","the-lion-king", "the-dark-knight", "pulp-fiction", "the-godfather","jurassic-park","independence-day","deadpool","indiana-jones","the-lord-of-the-rings","guardians-of-the-galaxy","harry-potter","star-wars"],
-          ["zoolander", "dumb-and-dumber", "ace-ventura", "tropic-thunder", "airplane","young-frankenstein","office-space","happy-gilmore","anchorman","ghostbusters","step-brothers","austin-powers","meet-the-parents"]
+          ["alien", "jaws", "predator", "it", "halloween", "insidious","the shining","the silence of the lambs","the sixth sense","the ring","saw","the conjuring"],
+          ["gladiator", "pirates of the caribbean","the lion king", "the dark knight", "pulp fiction", "the godfather","jurassic park","independence day","deadpool","indiana jones","the lord of the rings","guardians of the galaxy","harry potter","star-wars"],
+          ["zoolander", "dumb and dumber", "ace ventura", "tropic thunder", "airplane","young frankenstein","office space","happy gilmore","anchorman","ghostbusters","step brothers","austin powers","meet the parents"]
       ];
   
       chosenCategory = categories[Math.floor(Math.random() * categories.length)];
       word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-      word = word.replace(/\s/g, "-");
+    //   imdb.get({name: word}, {apiKey: 'GYSqfQioySxjx6z0GkiqwvFWIFrvNj'}).then(console.log).catch(console.log);
+    //   word = word.replace(/\s/g, "-");
       console.log(word);
       buttons();
   
@@ -174,7 +189,7 @@ window.onload = function () {
   
       var catagoryIndex = categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
-      showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+      showClue.innerHTML = "Movie quote: - " +  hints [catagoryIndex][hintIndex];
     };
   
      // Reset
