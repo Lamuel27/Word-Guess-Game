@@ -5,7 +5,7 @@ body {
     text-align: center;
     font-size: 18px;
   }
-  
+
   .wrappper {
     width: 100%;
     margin: 0 auto;
@@ -16,11 +16,11 @@ body {
     clear: both;
   }
   
-  canvas {
+  /* canvas {
     color: #fff;
     border: #fff dashed 2px;
     padding: 15px;
-  }
+  } */
   
   h1, h2, h3 {
     font-family: 'Limelight', cursive;

@@ -14,9 +14,7 @@
 
 window.onload = function () {
 
-    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-          't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
     
     var categories;         // Array of topics
     var chosenCategory;     // Selected catagory
@@ -103,7 +101,6 @@ window.onload = function () {
         // Animate man
     var animate = function () {
       var drawMe = lives ;
-      drawArray[drawMe]();
     }
   
     
@@ -176,7 +173,12 @@ window.onload = function () {
     }
   
     play();
-    
+  /*
+   [ {Name:"alien", hint:"Science-Fiction horror film", category:"categories[0]"},
+      {}
+    ]
+  
+  */
     // Hint
   
       hint.onclick = function() {
@@ -192,6 +194,13 @@ window.onload = function () {
       showClue.innerHTML = "Movie quote: - " +  hints [catagoryIndex][hintIndex];
     };
   
+    // Play Theme
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", ["assets/mp3/Theme.mp3"]);
+    $('#song').on("click", function() {
+      audioElement.play();
+    });
+
      // Reset
   
     document.getElementById('reset').onclick = function() {

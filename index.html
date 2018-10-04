@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assets/javascript/game.js"></script>
     <!-- <script data-main="assets/javascript/game.js" src="assets/javascript/require.js"></script> -->
+    <!-- play a different movie theme each time -->
 </head>
 <body background="assets/images/darkness.png">
     <div class="wrapper">
@@ -16,17 +18,19 @@
          <h2></h2>
          <p>Use the alphabet below to guess the movie title, or click hint to get a clue. </p>
      </div>
-     <div class="wrapper">
-         <div id="buttons">
-         </div>  
-         <p id="catagoryName"></p>
+         <p style="border-bottom: solid;" id="catagoryName"></p>
          <div id="hold">
          </div>
+         <p></p>
+         <p></p>
+         <div class="wrapper">
+            <div id="buttons"></div>  
          <p id="mylives"></p>
-         <p id="clue">Movie quote -</p>  
+         <p id="clue"></p>  
           <canvas id="movietype"></canvas>
          <div class="container">
            <button id="hint">Hint</button>
+           <button id="song">Play Random Movie Theme</button>
            <button id="reset">Play again</button>
          </div>
      </div>
