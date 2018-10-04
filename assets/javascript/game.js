@@ -25,13 +25,12 @@ window.onload = function () {
     var lives ;             // Lives
     var counter ;           // Count correct geusses
     var space;              // Number of spaces in word '-'
-    
+
     // Get elements
     var showLives = document.getElementById("mylives");
     var showCatagory = document.getElementById("scatagory");
     var getHint = document.getElementById("hint");
     var showClue = document.getElementById("clue");
-  
   
   
     // create alphabet ul
@@ -195,10 +194,29 @@ window.onload = function () {
     };
   
     // Play Theme
+//     function playRandomSound(){
+//       var sounds = [
+//         "assets/mp3/Avengers.mp3",
+//           "assets/mp3/Predator.mp3",
+//           "assets/mp3/StarWars.mp3",
+//           "assets/mp3/Theme.mp3",];
+       
+//       var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
+//       document.getElementById("player").innerHTML="<embed src=\""+soundFile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+//  }
+    // var songs = [
+    //   "assets/mp3/Avengers.mp3",
+    //   "assets/mp3/Predator.mp3",
+    //   "assets/mp3/StarWars.mp3",
+    //   "assets/mp3/Theme.mp3",
+    // ];
     var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", ["assets/mp3/Theme.mp3"]);
+    audioElement.setAttribute("src", "assets/mp3/Avengers.mp3");
     $('#song').on("click", function() {
       audioElement.play();
+    //   var index = Math.floor(Math.random() * (songs.length));
+    // $("#song").html("<embed src=\"" + songs[index]);
+
     });
 
      // Reset
