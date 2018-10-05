@@ -204,21 +204,48 @@ window.onload = function () {
 //       var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
 //       document.getElementById("player").innerHTML="<embed src=\""+soundFile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
 //  }
+function getRandomInt (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max-min)) + min;
+
+}
+
+  // $('#song').on("click", function() {
+//   audioElement.play();
+// function audiolay() {
+  var audio_files = [
+    "assets/mp3/Avengers.mp3",
+    "assets/mp3/Predator.mp3",
+    "assets/mp3/StarWars.mp3",
+    "assets/mp3/Theme.mp3",
+  ];
+
+  var random_file = audio_files[getRandomInt(0,audio_files.length)];
+
+  var audio = new Audio(random_file);
+
+  audio.play();
+
     // var songs = [
     //   "assets/mp3/Avengers.mp3",
     //   "assets/mp3/Predator.mp3",
     //   "assets/mp3/StarWars.mp3",
     //   "assets/mp3/Theme.mp3",
     // ];
-    var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", "assets/mp3/Avengers.mp3");
-    $('#song').on("click", function() {
-      audioElement.play();
+    // var audioElement = document.createElement("audio");
+    // audioElement.setAttribute("src", songs[0,1,2,3]);
+    // $('#song').on("click", function() {
+    // audioElement.play();
     //   var index = Math.floor(Math.random() * (songs.length));
     // $("#song").html("<embed src=\"" + songs[index]);
 
-    });
+    // });
 
+    // generateRandomNumber = function () {
+    // (song[0],songs[3]) 
+    //  return Math.random() * (songs[3]-songs[0]) + songs[0];
+    // }
      // Reset
   
     document.getElementById('reset').onclick = function() {
@@ -229,4 +256,3 @@ window.onload = function () {
       play();
     }
   }
-  
