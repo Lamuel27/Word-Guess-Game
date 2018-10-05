@@ -211,8 +211,8 @@ function getRandomInt (min, max) {
 
 }
 
-  // $('#song').on("click", function() {
-//   audioElement.play();
+document.getElementById('song').onclick = function() {
+  //   audioElement.play();
 // function audiolay() {
   var audio_files = [
     "assets/mp3/Avengers.mp3",
@@ -226,7 +226,7 @@ function getRandomInt (min, max) {
   var audio = new Audio(random_file);
 
   audio.play();
-
+}
     // var songs = [
     //   "assets/mp3/Avengers.mp3",
     //   "assets/mp3/Predator.mp3",
