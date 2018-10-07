@@ -95,14 +95,7 @@ window.onload = function () {
 
         }
       }
-    }
-  
-        // Animate man
-    var animate = function () {
-      var drawMe = lives ;
-    }
-  
-    
+    }    
      // Movie Type
     canvas =  function(){
   
@@ -150,7 +143,7 @@ window.onload = function () {
     play = function () {
       categories = [
           ["alien", "jaws", "predator", "it", "halloween", "insidious","the shining","the silence of the lambs","the sixth sense","the ring","saw","the conjuring"],
-          ["gladiator", "pirates of the caribbean","the lion king", "the dark knight", "pulp fiction", "the godfather","jurassic park","independence day","deadpool","indiana jones","the lord of the rings","guardians of the galaxy","harry potter","star-wars"],
+          ["avengers","gladiator", "pirates of the caribbean","the lion king", "the dark knight", "pulp fiction", "the godfather","jurassic park","independence day","deadpool","indiana jones","the lord of the rings","guardians of the galaxy","harry potter","star-wars"],
           ["zoolander", "dumb and dumber", "ace ventura", "tropic thunder", "airplane","young frankenstein","office space","happy gilmore","anchorman","ghostbusters","step brothers","austin powers","meet the parents"]
       ];
   
@@ -183,14 +176,14 @@ window.onload = function () {
       hint.onclick = function() {
   
         hints = [
-          ["Science-Fiction horror film", "Giant great white shark","Get to the Choppa!!","You'll float too!","Michael Myers","The further","Here's Johnny!","I ate his liver with some fava beans.","I see dead people..","Seven days...","Let's play a game","This thing has latched itself to your family."],
-          ["Strength and Honor!", "Stop blowing holes in my ship!","Hakuna Matata","I believe that whatever doesn't kill you simply makes you stranger.","Chill honey bunny","I'll make him an offer he can't refuse","Life, Uh, Finds a Way","Welcome to Earth!","All dinosaurs feared the T-Rex.","It belongs in a museum!","My precious..","Nothing goes over my head. My reflexes are too fast. I would catch it.","Avada Kedavra!","Rebel Scum!!"],
+          ["Xenomorph", "Giant great white shark","Get to the Choppa!!","You'll float too!","Michael Myers","The further","Here's Johnny!","I ate his liver with some fava beans.","I see dead people..","Seven days...","Let's play a game","This thing has latched itself to your family."],
+          ["If we can’t protect the Earth, you can be damn sure we’ll avenge it.","Strength and Honor!", "Stop blowing holes in my ship!","Hakuna Matata","I believe that whatever doesn't kill you simply makes you stranger.","Chill honey bunny","I'll make him an offer he can't refuse","Life, Uh, Finds a Way","Welcome to Earth!","All dinosaurs feared the T-Rex.","It belongs in a museum!","My precious..","Nothing goes over my head. My reflexes are too fast. I would catch it.","Avada Kedavra!","Rebel Scum!!"],
           ["It's a walk off, it's a walk off...", "Hey, guys. Whoa, Big Gulps, huh? All right! Well, see you later.", "All righty then!", " I don't read the script. The script reads me.", "I am serious... and don't call me Shirley.","Good night, Frau Blücher. (horses whinny)","I believe you have my stapler.","You're gonna die clown!","Knights of Columbus that hurt!!","Who you gonna call?","It's the f**kin' Catalina Wine Mixer!","Finally, we come to my number two man. His name? Number Two.","Gaylord Focker, will you be my son-in-law?"],
       ];
   
       var catagoryIndex = categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
-      showClue.innerHTML = "Movie quote: - " +  hints [catagoryIndex][hintIndex];
+      showClue.innerHTML = "Movie quote:  " +  hints [catagoryIndex][hintIndex];
     };
   
     // Play Theme
@@ -214,11 +207,18 @@ function getRandomInt (min, max) {
 document.getElementById('song').onclick = function() {
   //   audioElement.play();
 // function audiolay() {
+  
   var audio_files = [
     "assets/mp3/Avengers.mp3",
     "assets/mp3/Predator.mp3",
     "assets/mp3/StarWars.mp3",
     "assets/mp3/Theme.mp3",
+    "assets/mp3/Jurassic.mp3",
+    "assets/mp3/LordRings.mp3",
+    "assets/mp3/Gladiator.mp3",
+    "assets/mp3/JackSparrow.mp3",
+    "assets/mp3/HedwigTheme.mp3",
+
   ];
 
   var random_file = audio_files[getRandomInt(0,audio_files.length)];
@@ -226,6 +226,11 @@ document.getElementById('song').onclick = function() {
   var audio = new Audio(random_file);
 
   audio.play();
+
+document.getElementById('pause').onclick = function() {
+
+  audio.pause();
+}
 }
     // var songs = [
     //   "assets/mp3/Avengers.mp3",
