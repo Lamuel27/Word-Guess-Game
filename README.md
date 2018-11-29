@@ -11,7 +11,7 @@ Note: This page is responsive, so feel free to play on a mobile device!
 
 ## Built With
 
-* Javascript
+* JavaScript
 * HTML5 and CSS3
 * Bootstrap
 
