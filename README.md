@@ -13,6 +13,7 @@ Note: This page is responsive, so feel free to play on a mobile device!
 
 * Javascript
 * HTML5 and CSS3
+* Bootstrap
 
 
 ## Authors
